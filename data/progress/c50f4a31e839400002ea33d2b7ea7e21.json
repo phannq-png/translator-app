@@ -1,0 +1,11 @@
+{
+    "docx_path": "C:\\Users\\phann\\OneDrive\\Desktop\\Project\\Google-cli-Project\\Translator\\test\\input\\[JP]BMT 54-2026.docx",
+    "domain": "建築",
+    "translations": {
+        "【０００１】\n\n本発明は、施工面が長大な垂直状の外壁面、水平状の陸屋根面、傾斜状の屋根等の施工において、支持材を、適宜長さに加工して好適に利用することができる支持材の接続構造に関する。\n\n【背景技術】": "【0001】\n\nSáng chế này liên quan đến cấu trúc kết nối của vật liệu hỗ trợ, cho phép vật liệu hỗ trợ được gia công thành độ dài phù hợp và sử dụng một cách thích hợp trong việc thi công các bề mặt công trình dài và thẳng đứng như mặt tường ngoài, mặt mái bằng phẳng nằm ngang, hoặc mái nhà dốc, v.v.\n\n【BỐI CẢNH KỸ THUẬT】",
+        "【０００２】\n\n従来、屋根構造の梁の端部を直線的に連結する構造としては、例えば特許文献１～３に示される構造が知られている。\n\n特許文献１には、Ｉ形鋼の上フランジ上にて、突き合わせ状に配設したＣ型鋼に跨がるようにＺ型鋼を固定することで、二つのＣ型鋼を直線状に連結した構造が記載されている。\n\n特許文献２には、Ｉ形鋼の上フランジ上にて、突き合わせ状に配設した構造部材（アングル材）に跨がるように接合部材として角柱材やＣ形鋼を固定する構造が記載されている。\n\n特許文献３には、突き合わせ状に配設したＣ型鋼（支持桁材）に跨がるように、そのウェブ部の内側にジョイント板（アングル材）を配設した構造が記載されている。": "【０００２】\n\nTheo truyền thống, các kết cấu liên kết thẳng hàng đầu dầm trong kết cấu mái, ví dụ như các kết cấu được trình bày trong các tài liệu bằng sáng chế 1-3, đã được biết đến.\n\nTrong tài liệu bằng sáng chế 1, một kết cấu được mô tả trong đó hai thép hình chữ C được liên kết thẳng hàng bằng cách cố định thép hình chữ Z bắc ngang qua các thép hình chữ C được bố trí đối đầu trên cánh trên của thép hình chữ I.\n\nTrong tài liệu bằng sáng chế 2, một kết cấu được mô tả trong đó thép hộp vuông và thép hình chữ C được cố định như một phần tử nối để bắc ngang qua các cấu kiện kết cấu (thép góc) được bố trí đối đầu trên cánh trên của thép hình chữ I.\n\nTrong tài liệu bằng sáng chế 3, một kết cấu được mô tả trong đó bản nối (thép góc) được bố trí ở mặt trong của bản bụng của các thép hình chữ C (dầm thép đỡ) được bố trí đối đầu, nhằm mục đích liên kết chúng.",
+        "【先行技術文献】\n\n【特許文献】\n\n【０００３】": "【Tài liệu kỹ thuật trước đây】",
+        "【特許文献１】特開２０２２－１０２４３７号公報\n\n【特許文献２】特開２０１７－０１４７３１号公報\n\n【特許文献３】特開平０８－２１８５４７号公報": "【Tài liệu sáng chế 1】Công bố sáng chế số 2022-102437\n【Tài liệu sáng chế 2】Công bố sáng chế số 2017-014731\n【Tài liệu sáng chế 3】Công bố sáng chế Heisei số 08-218547"
+    },
+    "last_updated": 1777196650.6853106
+}
