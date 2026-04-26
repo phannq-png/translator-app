@@ -1,0 +1,12 @@
+{
+    "batch_size": 10,
+    "provider_detector": "Google Gemini",
+    "detector_api_key": "AIzaSyCvfbpeqMdvBMiYO5e-yU3jCzqVOcjJyys",
+    "model_detector": "gemini-2.5-flash-lite",
+    "provider_translator": "Google Gemini",
+    "translator_api_key": "AIzaSyCvfbpeqMdvBMiYO5e-yU3jCzqVOcjJyys",
+    "model_translator": "gemini-2.5-flash",
+    "provider_reviewer": "Google Gemini",
+    "reviewer_api_key": "AIzaSyCvfbpeqMdvBMiYO5e-yU3jCzqVOcjJyys",
+    "model_reviewer": "gemini-2.5-flash"
+}
