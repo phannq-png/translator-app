@@ -1,9 +1,17 @@
 import sqlite3
 import os
+import sys
 import csv
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+# Xác định thư mục gốc của ứng dụng (hỗ trợ đóng gói .exe)
+if getattr(sys, 'frozen', False):
+    # Nếu đang chạy từ file .exe
+    BASE_DIR = Path(sys.executable).parent
+else:
+    # Nếu đang chạy từ mã nguồn python
+    BASE_DIR = Path(__file__).resolve().parent.parent
+
 DATA_DIR = BASE_DIR / "data"
 DB_PATH = DATA_DIR / "glossary.db"
 
