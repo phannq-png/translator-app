@@ -219,9 +219,9 @@ class SettingsWindow(ctk.CTkToplevel):
             except Exception as e:
                 messagebox.showerror("Lỗi", f"Không thể nhập file: {e}")
 
-    def _get_current_ui_config(self):
+    def _get_current_ui_config(self) -> dict:
         """Lấy dữ liệu từ các widget trên UI."""
-        config = {}
+        config: dict = {}
         try: config["batch_size"] = int(self.ent_batch.get())
         except: config["batch_size"] = 5
         

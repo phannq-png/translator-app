@@ -1,9 +1,17 @@
 import json
 import os
+import sys
 import hashlib
 import time
+from pathlib import Path
 
-PROGRESS_DIR = "data/progress"
+# Xác định thư mục gốc của ứng dụng (hỗ trợ đóng gói .exe)
+if getattr(sys, 'frozen', False):
+    BASE_DIR = Path(sys.executable).parent
+else:
+    BASE_DIR = Path(__file__).resolve().parent.parent
+
+PROGRESS_DIR = os.path.join(BASE_DIR, "data", "progress")
 
 def _get_progress_path(docx_path: str) -> str:
     """Tạo đường dẫn file json dựa trên hash của đường dẫn file docx."""
@@ -28,7 +36,7 @@ def save_progress(docx_path: str, domain: str, translated_dict: dict):
     with open(progress_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
-def load_progress(docx_path: str) -> dict:
+def load_progress(docx_path: str) -> dict | None:
     """Tải tiến trình dịch nếu tồn tại."""
     docx_path = os.path.abspath(docx_path)
     progress_file = _get_progress_path(docx_path)

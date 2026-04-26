@@ -23,9 +23,12 @@ else:
             print("\n--- DANH SÁCH MODEL KHẢ DỤNG CHO API KEY NÀY ---")
             found = False
             for m in client.models.list():
-                if "generateContent" in m.supported_methods:
+                # API mới dùng supported_actions, API cũ dùng supported_methods
+                methods = getattr(m, 'supported_actions', None) or getattr(m, 'supported_methods', [])
+                if "generateContent" in methods:
                     # Loại bỏ tiền tố 'models/' để copy vào App cho tiện
-                    clean_name = m.name.replace("models/", "")
+                    name = m.name or ""
+                    clean_name = name.replace("models/", "")
                     print(f"- {clean_name}")
                     found = True
             

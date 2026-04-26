@@ -1,0 +1,3 @@
+# Pyrefly configuration
+# Trỏ tới Python interpreter trong venv để nhận diện đúng các thư viện đã cài
+python_interpreter = "venv/Scripts/python.exe"

@@ -2,7 +2,7 @@ from google import genai
 from core.config_manager import load_config
 from core.glossary_manager import get_domains
 
-def _generate_content(prompt: str, provider: str, api_key: str, model_name: str) -> str:
+def _generate_content(prompt: str, provider: str, api_key: str | None, model_name: str) -> str:
     """Factory method to call the appropriate AI Provider."""
     if not api_key:
         raise ValueError(f"API Key cho {provider} bị trống. Vui lòng cài đặt trong Settings.")
@@ -13,7 +13,10 @@ def _generate_content(prompt: str, provider: str, api_key: str, model_name: str)
             model=model_name,
             contents=prompt,
         )
-        return response.text.strip()
+        text = response.text
+        if text is None:
+            raise ValueError("Google Gemini trả về kết quả rỗng.")
+        return text.strip()
         
     elif provider == "OpenAI":
         from openai import OpenAI
@@ -22,7 +25,10 @@ def _generate_content(prompt: str, provider: str, api_key: str, model_name: str)
             model=model_name,
             messages=[{"role": "user", "content": prompt}]
         )
-        return response.choices[0].message.content.strip()
+        content = response.choices[0].message.content
+        if content is None:
+            raise ValueError("OpenAI trả về kết quả rỗng.")
+        return content.strip()
         
     elif provider == "Anthropic":
         import anthropic
@@ -32,7 +38,11 @@ def _generate_content(prompt: str, provider: str, api_key: str, model_name: str)
             max_tokens=4096,
             messages=[{"role": "user", "content": prompt}]
         )
-        return response.content[0].text.strip()
+        # Chỉ lấy block có type là TextBlock
+        text_block = next((b for b in response.content if hasattr(b, 'text')), None)
+        if text_block is None:
+            raise ValueError("Anthropic trả về kết quả rỗng.")
+        return text_block.text.strip()
         
     else:
         raise ValueError(f"Provider {provider} không được hỗ trợ.")
