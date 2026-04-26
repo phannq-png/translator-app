@@ -21,3 +21,7 @@ data/config.json
 
 # Output documents
 data/output/
+
+# Test files
+test/input/*.docx
+test/input/*.json
