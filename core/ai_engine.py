@@ -38,8 +38,8 @@ def _generate_content(prompt: str, provider: str, api_key: str | None, model_nam
             max_tokens=4096,
             messages=[{"role": "user", "content": prompt}]
         )
-        # Chỉ lấy block có type là TextBlock
-        text_block = next((b for b in response.content if hasattr(b, 'text')), None)
+        # Dùng isinstance để type checker thu hẹp kiểu chính xác
+        text_block = next((b for b in response.content if isinstance(b, anthropic.types.TextBlock)), None)
         if text_block is None:
             raise ValueError("Anthropic trả về kết quả rỗng.")
         return text_block.text.strip()
