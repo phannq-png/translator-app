@@ -25,3 +25,8 @@ data/output/
 # Test files
 test/input/*.docx
 test/input/*.json
+
+# PyInstaller build artifacts
+dist/
+build/
+*.spec
